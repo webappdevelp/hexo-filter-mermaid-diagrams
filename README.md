@@ -1,4 +1,4 @@
-# hexo-filter-mermaid
+# hexo-filter-mermaid-diagrams
 [![Build Status](https://travis-ci.org/webappdevelp/hexo-filter-mermaid-diagrams.svg?branch=master)](https://travis-ci.org/webappdevelp/hexo-filter-mermaid-diagrams)
 ----
 ![](/img/header.png)
@@ -84,7 +84,7 @@ merge newbranch
 
 ## Install
 ```bash
-$ yarn add hexo-filter-mermaid
+$ yarn add hexo-filter-mermaid-diagrams
 ```
 
 ## Config
