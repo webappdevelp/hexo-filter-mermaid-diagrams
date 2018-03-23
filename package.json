@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "git+https://github.com/webappdevelp/hexo-filter-mermaid-diagrams.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webappdevelp/hexo-filter-mermaid-diagrams.git"
+  },
   "keywords": [
     "hexo-filter-mermaid-diagrams",
     "hexo-filter-mermaid",
@@ -14,12 +17,15 @@
     "mermaid"
   ],
   "author": "https://webappdevelp.github.io",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/webappdevelp/hexo-filter-mermaid-diagrams/issues"
   },
   "homepage": "https://github.com/webappdevelp/hexo-filter-mermaid-diagrams#readme",
   "dependencies": {
     "deep-assign": "^2.0.0"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }
