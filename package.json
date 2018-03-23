@@ -1,6 +1,6 @@
 {
   "name": "hexo-filter-mermaid-diagrams",
-  "version": "1.0.1",
+  "version": "0.0.1",
   "description": "mermaid diagrams for hexo",
   "main": "index.js",
   "scripts": {
@@ -27,5 +27,6 @@
   },
   "directories": {
     "lib": "lib"
-  }
+  },
+  "devDependencies": {}
 }
