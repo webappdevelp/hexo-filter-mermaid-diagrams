@@ -1,5 +1,7 @@
 # hexo-filter-mermaid-diagrams
 [![Build Status](https://travis-ci.org/webappdevelp/hexo-filter-mermaid-diagrams.svg?branch=master)](https://travis-ci.org/webappdevelp/hexo-filter-mermaid-diagrams)
+![node](https://img.shields.io/node/v/passport.svg)
+![node](https://img.shields.io/node/v/passport.svg)
 ----
 ![](/img/header.png)
 Generation of diagrams and flowcharts from text in a similar manner as markdown.
