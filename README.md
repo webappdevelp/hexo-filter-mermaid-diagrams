@@ -1,7 +1,9 @@
 # hexo-filter-mermaid-diagrams
 [![Build Status](https://travis-ci.org/webappdevelp/hexo-filter-mermaid-diagrams.svg?branch=master)](https://travis-ci.org/webappdevelp/hexo-filter-mermaid-diagrams)
-![node](https://img.shields.io/node/v/passport.svg)
-![node](https://img.shields.io/node/v/passport.svg)
+[![node](https://img.shields.io/node/v/hexo-filter-mermaid-diagrams.svg)](https://www.npmjs.com/package/hexo-filter-mermaid-diagrams)
+[![npm downloads](https://img.shields.io/npm/dt/hexo-filter-mermaid-diagrams.svg)](https://www.npmjs.com/package/hexo-filter-mermaid-diagrams)
+[![npm version](https://img.shields.io/npm/v/hexo-filter-mermaid-diagrams.svg)](https://www.npmjs.com/package/hexo-filter-mermaid-diagrams)
+[![GitHub release](https://img.shields.io/github/release/webappdevelp/hexo-filter-mermaid-diagrams.svg)](https://github.com/webappdevelp/hexo-filter-mermaid-diagrams/releases/latest)
 ----
 ![](/img/header.png)
 Generation of diagrams and flowcharts from text in a similar manner as markdown.
