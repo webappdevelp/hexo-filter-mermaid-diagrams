@@ -95,5 +95,9 @@ mermaid: ## mermaid url https://github.com/knsv/mermaid
   options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
     #startOnload: true  // default true
 ```
+## Fixed
+- Keep dom right;
+- Article preview lists can show code, and post show diagrams;
+
 ## Credits
 Thanks to the [Mermaid](https://mermaidjs.github.io/) project!
