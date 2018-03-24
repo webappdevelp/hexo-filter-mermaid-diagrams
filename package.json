@@ -1,12 +1,15 @@
 {
   "name": "hexo-filter-mermaid-diagrams",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "mermaid diagrams for hexo",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "git+https://github.com/webappdevelp/hexo-filter-mermaid-diagrams.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webappdevelp/hexo-filter-mermaid-diagrams.git"
+  },
   "keywords": [
     "hexo-filter-mermaid-diagrams",
     "hexo-filter-mermaid",
