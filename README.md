@@ -80,13 +80,13 @@ merge newbranch
 
 > Click here [Mermaid](https://github.com/knsv/mermaid) to learn more official discriptions! 
 
-## Install
+## Step1 Install Package
 ```bash
 $ yarn add hexo-filter-mermaid-diagrams
 ```
 
-## Config
-after installed, you should edit hexo config file: `_config.yml`:
+## Step2 Edit Config
+After installed, you should edit hexo config file: `_config.yml`:
 ```yaml
 # mermaid chart
 mermaid: ## mermaid url https://github.com/knsv/mermaid
@@ -95,9 +95,41 @@ mermaid: ## mermaid url https://github.com/knsv/mermaid
   options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
     #startOnload: true  // default true
 ```
+## Step3 include mermaid.js in pug or ejs
+After edited `_config.yml`, you shou edit your blog page component like `after_footer.pug` or `after-footer.ejs`.
+
+Where is it?
+
+Open your theme folder, you can see the `layout` folder, open it and then you could see it.
+
+Okey! if your blog is used pug, you can copy the below codes in `after_footer.pug`:
+
+```pug
+if theme.mermaid.enable == true
+  script(type='text/javascript', id='maid-script' mermaidoptioins=theme.mermaid.options src='https://unpkg.com/mermaid@'+ theme.mermaid.version + '/dist/mermaid.min.js' + '?v=' + theme.version)
+  script.
+    if (window.mermaid) {
+      var options = JSON.parse(document.getElementById('maid-script').getAttribute('mermaidoptioins'));
+      mermaid.initialize(options);
+    }
+```
+
+or `after-footer.ejs` should copy below codes:
+```
+<% if (theme.mermaid.enable) { %>
+  <script src='https://unpkg.com/mermaid@<%= theme.mermaid.version %>/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+<% } %>
+```
+
 ## Fixed
+- className 'mermaid' can be showed mermaid diagrams everywhere
 - Keep dom right;
-- Article preview lists can show code, and post show diagrams;
+- ~~Article preview lists can show code, and post show diagrams;~~
 
 ## Credits
 Thanks to the [Mermaid](https://mermaidjs.github.io/) project!
