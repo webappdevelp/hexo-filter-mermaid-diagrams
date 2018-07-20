@@ -84,6 +84,7 @@ merge newbranch
 ```bash
 $ yarn add hexo-filter-mermaid-diagrams
 ```
+> In your blog floder, not hexo floder
 
 ## Step2 Edit Config
 After installed, you should edit hexo config file: `_config.yml`:
@@ -96,7 +97,7 @@ mermaid: ## mermaid url https://github.com/knsv/mermaid
     #startOnload: true  // default true
 ```
 ## Step3 include mermaid.js in pug or ejs
-After edited `_config.yml`, you shou edit your blog page component like `after_footer.pug` or `after-footer.ejs`.
+After edited `_config.yml`, you shou edit your blog page component like `after_footer.pug` , `after-footer.ejs` or `swig`.
 
 Where is it?
 
@@ -114,7 +115,7 @@ if theme.mermaid.enable == true
     }
 ```
 
-or `after-footer.ejs` should copy below codes:
+`after-footer.ejs` should copy below codes:
 ```
 <% if (theme.mermaid.enable) { %>
   <script src='https://unpkg.com/mermaid@<%= theme.mermaid.version %>/dist/mermaid.min.js'></script>
@@ -124,6 +125,19 @@ or `after-footer.ejs` should copy below codes:
     }
   </script>
 <% } %>
+```
+
+swig template engine:
+```swig
+{% if theme.mermaid.enable %}
+  <script id="maid-script" data-options='{{ JSON.stringify(theme.mermaid.options) }}' src='https://unpkg.com/mermaid@{{ theme.mermaid.version }}/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      var options = JSON.parse(document.getElementById('maid-script').getAttribute('data-options'));
+      mermaid.initialize(options);
+    }
+  </script>
+{% endif %}
 ```
 
 ## Fixed
