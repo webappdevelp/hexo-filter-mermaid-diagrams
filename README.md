@@ -130,11 +130,10 @@ if theme.mermaid.enable == true
 swig template engine:
 ```swig
 {% if theme.mermaid.enable %}
-  <script id="maid-script" data-options='{{ JSON.stringify(theme.mermaid.options) }}' src='https://unpkg.com/mermaid@{{ theme.mermaid.version }}/dist/mermaid.min.js'></script>
+  <script src='https://unpkg.com/mermaid@{{ theme.mermaid.version }}/dist/mermaid.min.js'></script>
   <script>
     if (window.mermaid) {
-      var options = JSON.parse(document.getElementById('maid-script').getAttribute('data-options'));
-      mermaid.initialize(options);
+      mermaid.initialize({{ JSON.stringify(theme.mermaid.options) }});
     }
   </script>
 {% endif %}
