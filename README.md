@@ -3,7 +3,7 @@
 Generation of diagrams and flowcharts from text in a similar manner as markdown.
 Mermaid plugin is using [mermaid.js](https://mermaidjs.github.io/) fro hexo!
 ### flowchart
-```
+```mermaid
 graph TD;
     A-->B;
     A-->C;
@@ -12,7 +12,7 @@ graph TD;
 ```
 ![](/img/flow.png)
 ### Sequence diagram
-```
+```mermaid
 sequenceDiagram
     participant Alice
     participant Bob
@@ -27,7 +27,7 @@ sequenceDiagram
 ```
 ![](/img/sequence.png)
 ### Gantt diagram
-```
+```mermaid
 gantt
 dateFormat  YYYY-MM-DD
 title Adding GANTT diagram to mermaid
@@ -40,7 +40,7 @@ Future task2               :         des4, after des3, 5d
 ```
 ![](/img/gantt.png)
 ### Class diagram - ❗️ experimental
-```
+```mermaid
 classDiagram
 Class01 <|-- AveryLongClass : Cool
 Class03 *-- Class04
@@ -58,7 +58,7 @@ Class08 <--> C2: Cool label
 ```
 ![](/img/class.png)
 ### Git graph - ❗️ experimental
-```
+```mermaid
 gitGraph:
 options
 {
