@@ -96,6 +96,8 @@ mermaid: ## mermaid url https://github.com/knsv/mermaid
   options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
     #startOnload: true  // default true
 ```
+> ❗️❗️❗️Notice: if you want to use 'Class diagram', please edit your '_config.yml' file, set `external_link: false`. - this is hexo's bug.
+
 ## Step3 include mermaid.js in pug or ejs
 After edited `_config.yml`, you shou edit your blog page component like `after_footer.pug` , `after-footer.ejs` or `swig`.
 
