@@ -36,7 +36,7 @@ section A section
 Completed task            :done,    des1, 2014-01-06,2014-01-08
 Active task               :active,  des2, 2014-01-09, 3d
 Future task               :         des3, after des2, 5d
-Future task2               :         des4, after des3, 5d
+Future task2              :         des4, after des3, 5d
 ```
 ![](/img/gantt.png)
 ### Class diagram - ❗️ experimental
@@ -78,13 +78,13 @@ merge newbranch
 ```
 ![](/img/git.png)
 
-> Click here [Mermaid](https://github.com/knsv/mermaid) to learn more official discriptions! 
+> Click here [Mermaid](https://github.com/knsv/mermaid) to learn more official descriptions! 
 
 ## Step1 Install Package
 ```bash
 $ yarn add hexo-filter-mermaid-diagrams
 ```
-> In your blog floder, not hexo floder
+> In your blog folder, not hexo folder
 
 ## Step2 Edit Config
 After installed, you should edit hexo config file: `_config.yml`:
@@ -109,10 +109,10 @@ Okey! if your blog is used pug, you can copy the below codes in `after_footer.pu
 
 ```pug
 if theme.mermaid.enable == true
-  script(type='text/javascript', id='maid-script' mermaidoptioins=theme.mermaid.options src='https://unpkg.com/mermaid@'+ theme.mermaid.version + '/dist/mermaid.min.js' + '?v=' + theme.version)
+  script(type='text/javascript', id='maid-script' mermaidoptions=theme.mermaid.options src='https://unpkg.com/mermaid@'+ theme.mermaid.version + '/dist/mermaid.min.js' + '?v=' + theme.version)
   script.
     if (window.mermaid) {
-      var options = JSON.parse(document.getElementById('maid-script').getAttribute('mermaidoptioins'));
+      var options = JSON.parse(document.getElementById('maid-script').getAttribute('mermaidoptions'));
       mermaid.initialize(options);
     }
 ```
