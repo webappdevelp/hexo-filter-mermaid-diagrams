@@ -105,6 +105,7 @@ Please also enable mermaid in `_config.yml` of theme, it may be set to false by 
 # Mermaid tag
 mermaid:
   enable: false # change to true
+  version: "8.8.4" # change to latest
   # Available themes: default | dark | forest | neutral
   theme: forest
 ```
