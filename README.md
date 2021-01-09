@@ -87,6 +87,7 @@ $ yarn add hexo-filter-mermaid-diagrams
 > In your blog floder, not hexo floder
 
 ## Step2 Edit Config
+###  project config
 After installed, you should edit hexo config file: `_config.yml`:
 ```yaml
 # mermaid chart
@@ -97,6 +98,17 @@ mermaid: ## mermaid url https://github.com/knsv/mermaid
     #startOnload: true  // default true
 ```
 > ❗️❗️❗️Notice: if you want to use 'Class diagram', please edit your '_config.yml' file, set `external_link: false`. - hexo bug.
+### theme config
+Please also enable mermaid in `_config.yml` of theme, it may be set to false by default, e.g. [theme-next](https://github.com/theme-next/hexo-theme-next/blob/master/_config.yml#L813)
+
+```yaml
+# Mermaid tag
+mermaid:
+  enable: false # change to true
+  version: "8.8.4" # change to latest
+  # Available themes: default | dark | forest | neutral
+  theme: forest
+```
 
 ## Step3 include mermaid.js in pug or ejs
 After edited `_config.yml`, you shou edit your blog page component like `after_footer.pug` , `after-footer.ejs` or `swig`.
@@ -135,7 +147,7 @@ swig template engine:
   <script src='https://unpkg.com/mermaid@{{ theme.mermaid.version }}/dist/mermaid.min.js'></script>
   <script>
     if (window.mermaid) {
-      mermaid.initialize({{ JSON.stringify(theme.mermaid.options) }});
+      mermaid.initialize(JSON.stringify({{ theme.mermaid.options }}));
     }
   </script>
 {% endif %}
